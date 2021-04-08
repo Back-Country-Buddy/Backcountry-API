@@ -1,5 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe Tour, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'validations' do
+    it { should validate_presence_of :date}
+    it { should validate_presence_of :location}
+    it { should validate_presence_of :creator_id}
+    it { should validate_presence_of :complete}
+  end
+
+  describe 'relationships' do
+    it {should belong_to :}
+    it {should have_many :tour_users}
+    it {should have_many :plans}
+    it {should have_many(:users).through(:tour_users)}
+  end
+
+  describe 'instance methods' do
+  end
 end
