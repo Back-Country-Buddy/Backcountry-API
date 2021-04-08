@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_231912) do
     t.datetime "date"
     t.string "location"
     t.integer "creator_id"
-    t.boolean "complete"
+    t.boolean "complete", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
