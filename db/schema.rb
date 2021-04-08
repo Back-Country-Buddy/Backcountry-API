@@ -16,15 +16,15 @@ ActiveRecord::Schema.define(version: 2021_04_07_231912) do
   enable_extension "plpgsql"
 
   create_table "plans", force: :cascade do |t|
-    t.string "hazard_weather"
-    t.string "hazard_avalanche"
-    t.string "hazard_summary"
-    t.string "route_preview"
-    t.string "route_alternative"
-    t.string "emergency_plan"
-    t.string "debrief_conditions"
-    t.string "debrief_decisions"
-    t.string "debrief_plan"
+    t.string "hazard_weather", default: "nil"
+    t.string "hazard_avalanche", default: "nil"
+    t.string "hazard_summary", default: "nil"
+    t.string "route_preview", default: "nil"
+    t.string "route_alternative", default: "nil"
+    t.string "emergency_plan", default: "nil"
+    t.string "debrief_conditions", default: "nil"
+    t.string "debrief_decisions", default: "nil"
+    t.string "debrief_plan", default: "nil"
     t.bigint "tour_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(version: 2021_04_07_231912) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "email_address"
-    t.string "emergency_contact_name"
-    t.string "emergency_number"
+    t.string "emergency_contact_name", default: "nil"
+    t.string "emergency_number", default: "nil"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
