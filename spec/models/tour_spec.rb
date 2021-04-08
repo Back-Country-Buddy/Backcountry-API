@@ -9,7 +9,6 @@ RSpec.describe Tour, type: :model do
   end
 
   describe 'relationships' do
-    it {should belong_to :}
     it {should have_many :tour_users}
     it {should have_many :plans}
     it {should have_many(:users).through(:tour_users)}
