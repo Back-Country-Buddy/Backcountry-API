@@ -1,8 +1,8 @@
 module Types
   module Input
-    class NoteInputType < Types::BaseInputObject
-      argument :title, String, required: true
-      argument :body, String, required: true
+    class UserInputType < Types::BaseInputObject
+      argument :username, String, required: true
+      argument :email_address, String, required: true
     end
   end
 end
