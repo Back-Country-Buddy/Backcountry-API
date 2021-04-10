@@ -4,6 +4,6 @@ class Tour < ApplicationRecord
                         :creator_id,
                         :complete
   has_many :tour_users
-  has_many :plans
+  has_many :plans, dependent: :destroy
   has_many :users, through: :tour_users
 end
