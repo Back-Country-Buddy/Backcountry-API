@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_231912) do
     t.string "route_preview", default: "nil"
     t.string "route_alternative", default: "nil"
     t.string "emergency_plan", default: "nil"
+    t.boolean "checklist", default: false
     t.string "debrief_conditions", default: "nil"
     t.string "debrief_decisions", default: "nil"
     t.string "debrief_plan", default: "nil"
@@ -44,7 +45,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_231912) do
     t.datetime "date"
     t.string "location"
     t.integer "creator_id"
-    t.boolean "complete"
+    t.boolean "complete", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_231912) do
     t.string "email_address"
     t.string "emergency_contact_name", default: "nil"
     t.string "emergency_number", default: "nil"
+    t.string "friends", default: "nil"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
