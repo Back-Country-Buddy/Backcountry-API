@@ -8,7 +8,9 @@ module Mutations
       user_params = Hash params
 
       begin
-        user = User.update!(user_params)
+        user = User.find(user_params[:id])
+        # require 'pry'; binding.pry
+        user.update(user_params)
         
         { user: user }
       rescue ActiveRecord::RecordInvalid => e
