@@ -9,7 +9,6 @@ module Mutations
 
       begin
         user = User.find(user_params[:id])
-        # require 'pry'; binding.pry
         user.update(user_params)
         
         { user: user }
